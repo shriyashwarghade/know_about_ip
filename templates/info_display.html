@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">
+    <b>{{data.ip_address}}</b>
+</h1>
+<p>Last Update On: {{data.inserted_on.replace("T"," ")[:19]}}</p>
+<br>
+<div class="box">
+
+    {% for res in data.results %}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Heading</th>
+            <th scope="col">Detail</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>IP Address</td>
+            <td>{{data.ip_address}}</td>
+        </tr>
+        <tr>
+            <td>IP Address Type</td>
+            <td>{{data.ip_address_type}}</td>
+        </tr>
+        <tr>
+            <td>Reverse Name</td>
+            <td>{{res.reverse_name}}</td>
+        </tr>
+        <tr>
+            <td>Org Name</td>
+            <td>{{res.org_name}}</td>
+        </tr>
+        <tr>
+            <td>Register</td>
+            <td>{{res.register}}</td>
+        </tr>
+        <tr>
+            <td>BGP Prefix</td>
+            <td>{{res.bgp_prefix}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+    {% endfor %}
+</div>
+
+<button type="button"><a href="/">Reset Search</a></button>
+{% endblock %}
