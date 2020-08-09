@@ -54,4 +54,3 @@
 
     1. main.py: Code has been rated at 9.55/10
     2. elasticsearch_operations.py: Code has been rated at 9.60/10 
-
