@@ -1,5 +1,14 @@
 # Know About IP
 
+  1. Web frontend in Python using jinja templating which presents user with an input form and accepts IPv4 address. 
+  2. The given IPv4 address is checked in backend if it is valid or not. If it is not correct, error message is displayed to the user. 
+  3. If the IPv4 address is correct, IP information is fetched using API - "https://api.threatminer.org/v2/host.php?q=<PLACE_IP_ADDRESS_HERE>&rt=1". Threatminer documentation - https://www.threatminer.org/api.php.
+  4. Result is display in tabular format. If there is no result for given IP, appropriate message is displayed to the user.
+  5. Every time a user enters the IP address, it is looked in Elasticsearch for pre-existing result for that IP. If the result exists in Elasticsearch and is not more than 48 hours old, than that result is displayed to user immediately else information is fetched from Threatminer API, result is displayed to user and stored in elasticsearch.
+    
+
+# Steps To Run
+
 1. Install Python 3
 
     For Windows: https://phoenixnap.com/kb/how-to-install-python-3-windows
@@ -34,3 +43,8 @@
     
     python main.py
     
+# Pylint Score
+
+    1. main.py: Code has been rated at 9.55/10
+    2. elasticsearch_operations.py: Code has been rated at 9.60/10 
+
