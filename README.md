@@ -43,6 +43,13 @@
     
     python main.py
     
+# Technology Stack
+
+1. Python
+2. Bootstrap
+3. Jinja Templating
+4. Elasticsearch
+
 # Pylint Score
 
     1. main.py: Code has been rated at 9.55/10
